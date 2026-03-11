@@ -42,16 +42,33 @@
 
   <main class="py-5">
     <div class="container">
-      <h2 class="mb-3">Summary</h2>
-      <p class="text-muted">This page is a placeholder for the database design. Add schema diagrams, table definitions, and example SQL here.</p>
 
-      <div class="card mb-4">
+      <h2 class="mb-3 text-center">Summary</h2>
+      <p class="text-muted text-center">This page is a placeholder for the database design. Add schema diagrams, table definitions, and example SQL here.</p>
+
+      <!-- Centered data model image -->
+      <div class="row my-4">
+        <div class="col-12 text-center">
+          <img src="images/DBW_datamodel.png" alt="DBW Data Model" class="img-fluid rounded" style="max-width:900px;">
+        </div>
+      </div>
+
+      <!-- Centered textbox for explanation (user-editable later) -->
+      <div class="row">
+        <div class="col-12 col-md-8 mx-auto">
+          <label for="datamodel-explain" class="form-label fw-semibold">Explanation of the table</label>
+          <textarea id="datamodel-explain" class="form-control" rows="8" placeholder="Add explanation of the data model / table here..."></textarea>
+        </div>
+      </div>
+
+      <div class="card mb-4 mt-4">
         <div class="card-body">
           <h5 class="card-title">Example ERD</h5>
-          <p class="card-text text-muted">(Add ERD image or SVG here)</p>
+          <p class="card-text text-muted">(Add additional ERD images or SVGs below)</p>
           <img src="images/placeholder.png" alt="ERD placeholder" class="img-fluid rounded">
         </div>
       </div>
+
     </div>
   </main>
 
