@@ -1,0 +1,62 @@
+{
+  "ES": {
+    "title": "Spain",
+    "html": "<p><strong>Where:</strong> Barcelona! </p><p><strong>When:</strong> 2025-Present! </p><p>Highlights: Gaudí architecture, wandering Las Ramblas Struggling in my Bioinformatics Master!.</p>",
+    "image": "images/Barca_sem1.jpg",
+    "Description": "Spain is lit"
+  },
+  "US": {
+    "title": "United States",
+    "html": "<p><strong>Where:</strong> Various cities</p><p><strong>When:</strong> Several visits</p><p>Highlights: Road trips, national parks, and city exploring.</p>",
+    "image": "images/US.jpg",
+    "Description": "The land of opportunity"
+  },
+  "IT": {
+    "title": "Italy",
+    "html": "<p><strong>Where:</strong> Rome & Florence</p><p><strong>When:</strong> Summer 2022</p><p>Highlights: Colosseum, Renaissance art, and amazing pasta.</p>",
+    "image": "images/Italy.jpg",
+    "Description": "A journey through history"  
+  },
+  "DK": {
+    "title": "Denmark",
+    "html": "<p><strong>Where:</strong> Copenhagen</p><p><strong>When:</strong> Fall 2021</p><p>Highlights: Cozy hygge, canals, and cycling culture.</p>",
+    "image": "images/Denmark.jpg",
+    "Description": "A blend of modern design and historic charm"
+  },
+  "GB": {
+    "title": "United Kingdom",
+    "html": "<p><strong>Where:</strong> London</p><p><strong>When:</strong> Spring 2019</p><p>Highlights: Museums, theatre, and afternoon tea.</p>",
+    "image": "images/UK.jpg",
+    "Description": "Rich history and vibrant culture"
+  },
+  "JM": {
+    "title": "Jamaica",
+    "html": "<p><strong>Where:</strong> Montego Bay</p><p><strong>When:</strong> Winter 2020</p><p>Highlights: Beaches, reggae, and jerk chicken.</p>",
+    "image": "images/Jamaica.jpg",
+    "Description": "A tropical paradise"
+  },
+  "KR": {
+    "title": "South Korea",
+    "html": "<p><strong>Where:</strong> Seoul</p><p><strong>When:</strong> Spring 2024</p><p>Highlights: Street food, palaces, and vibrant neighborhoods.</p>",
+    "image": "images/South_Korea.jpg",
+    "Description": "A blend of tradition and modernity"
+  },
+  "MX": {
+    "title": "Mexico",
+    "html": "<p><strong>Where:</strong> Mexico City</p><p><strong>When:</strong> Summer 2018</p><p>Highlights: Museums, markets, and incredible cuisine.</p>",
+    "image": "images/Mexico.jpg",
+    "Description": "A vibrant tapestry of culture and history"
+  },
+  "AR": {
+    "title": "Argentina",
+    "html": "<p><strong>Where:</strong> Buenos Aires</p><p><strong>When:</strong> Spring 2017</p><p>Highlights: Tango, steak, and colourful neighborhoods.</p>",
+    "image": "images/Argentina.jpg",
+    "Description": "The land of passion and color"
+  },
+  "IE": {
+    "title": "Ireland",
+    "html": "<p><strong>Where:</strong> Dublin</p><p><strong>When:</strong> Fall 2016</p><p>Highlights: Pubs, literature, and green landscapes.</p>",
+    "image": "images/Ireland.jpg",
+    "Description": "Emerald Isle of charm and history"  
+  }
+}

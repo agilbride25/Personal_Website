@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adventures Thus Far!</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/svgmap@v2.19.2/dist/svg-map.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/svgmap@2.19.2/dist/svg-map.umd.min.js"></script>
+  <script src="map.js" defer></script>
+  
+</head>
+
+<body>
+
+  <!-- Nav -->
+    <header class="topnav">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+        <a class="navbar-brand fw-semibold" href="index.html">Austin Gilbride</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+            <li class="nav-item"><a class="nav-link px-lg-3" href="About.html">About</a></li>
+            <li class="nav-item"><a class="nav-link px-lg-3" href="Contact.html">Contact</a></li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+    </header>
+
+
+    <main class="adventures-page py-5">
+      <div class="container">
+        <div class="text-center mb-4">
+          <h1 class="fw-bold">Adventures Thus Far!</h1>
+          <p class="text-muted mb-0">A few places I’ve been and things I’ve seen.</p>
+        </div>
+
+        <!-- Intro / header section where you can explain the purpose of the page -->
+        <section class="page-intro mb-4">
+          <div class="content-box p-4 mx-auto" style="max-width:900px;">
+            <p class="mb-0">While I love relaxing in my home and learning new things by making (usually useless) projects, I also enjoy exploring new places and having adventures.
+                 The highlighted countries are all of the places I have been in the advneture of life so far, and I hope to add many more in the future! 
+            </p>
+          </div>
+        </section>
+
+        <!-- Constrained wrapper so the map stays inside the container -->
+        <div class="svg-map-wrapper">
+          <div id="svgMap"></div>
+
+          <!-- Overlay container (hidden until a country is clicked) -->
+          <div id="mapOverlay" class="map-overlay" style="display:none;">
+            <div class="map-overlay__panel" role="dialog" aria-modal="true">
+              <button id="overlayClose" class="map-overlay__close" aria-label="Close">✕</button>
+              <h3 id="overlayTitle"></h3>
+              <div id="overlayBody" class="map-overlay__body"></div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Country cards (mirrors style of Personal_Projects page) -->
+        <section class="countries-page py-5 pb-0">
+          <div class="container">
+            <div class="text-center mb-5">
+              <h2 class="fw-bold">Places I've Visited</h2>
+              <p class="text-muted mb-0">Details and highlights for each country highlighted on the map.</p>
+            </div>
+
+            <!-- Spain -->
+            <div class="project-card mb-4">
+              <div class="row g-4 align-items-center">
+                <div class="col-md-5">
+                  <div class="project-image-box">
+                    <img src="images/Barca_sem1.jpg" alt="Spain - Barcelona">
+                  </div>
+                </div>
+                <div class="col-md-7">
+                  <h3 class="h4 fw-semibold mb-2">Spain</h3>
+                  <p class="text-muted mb-3">Barcelona — 2025–Present. Highlights: Gaudí architecture, Las Ramblas, and life in Barcelona while pursuing my masters in bioinformatics!</p>
+                  <div class="d-flex gap-2 flex-wrap">
+                    <span class="badge text-bg-secondary">Barcelona</span>
+                    <span class="badge text-bg-secondary">2025</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- United States -->
+            <div class="project-card mb-4">
+              <div class="row g-4 align-items-center">
+                <div class="col-md-5">
+                  <div class="project-image-box">
+                    <img src="images/IMG_3455 2.jpeg" alt="United States">
+                  </div>
+                </div>
+                <div class="col-md-7">
+                  <h3 class="h4 fw-semibold mb-2">United States</h3>
+                  <p class="text-muted mb-3">Home base! I could put a whole page on my adventures in Maine, Shenandoah, Louisiana, and beyond. But for now, I will leave you with my favorite picture of Acadia National Park. it is the first sunrise every single day in the US!</p>
+                  <div class="d-flex gap-2 flex-wrap">
+                    <span class="badge text-bg-secondary">Home</span>
+                    <span class="badge text-bg-secondary">National Parks</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Italy -->
+            <div class="project-card mb-4">
+              <div class="row g-4 align-items-center">
+                <div class="col-md-5">
+                  <div class="project-image-box">
+                    <img src="images/Italy.jpg" alt="Italy - Rome & Florence">
+                  </div>
+                </div>
+                <div class="col-md-7">
+                  <h3 class="h4 fw-semibold mb-2">Italy</h3>
+                  <p class="text-muted mb-3">Rome & Florence — Summer 2022. Highlights: Colosseum, Renaissance art, and amazing pasta.</p>
+                  <div class="d-flex gap-2 flex-wrap">
+                    <span class="badge text-bg-secondary">Rome</span>
+                    <span class="badge text-bg-secondary">Florence</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Denmark -->
+            <div class="project-card mb-4">
+              <div class="row g-4 align-items-center">
+                <div class="col-md-5">
+                  <div class="project-image-box">
+                    <img src="images/Denmark.jpg" alt="Denmark - Copenhagen">
+                  </div>
+                </div>
+                <div class="col-md-7">
+                  <h3 class="h4 fw-semibold mb-2">Denmark</h3>
+                  <p class="text-muted mb-3">Copenhagen — Fall 2021. Highlights: cozy hygge, canals, and cycling culture.</p>
+                  <div class="d-flex gap-2 flex-wrap">
+                    <span class="badge text-bg-secondary">Copenhagen</span>
+                    <span class="badge text-bg-secondary">2021</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- United Kingdom -->
+            <div class="project-card mb-4">
+              <div class="row g-4 align-items-center">
+                <div class="col-md-5">
+                  <div class="project-image-box">
+                    <img src="images/UK.jpg" alt="United Kingdom - London">
+                  </div>
+                </div>
+                <div class="col-md-7">
+                  <h3 class="h4 fw-semibold mb-2">United Kingdom</h3>
+                  <p class="text-muted mb-3">London — Spring 2012. Highlights: museums, theatre, and afternoon tea.</p>
+                  <div class="d-flex gap-2 flex-wrap">
+                    <span class="badge text-bg-secondary">London</span>
+                    <span class="badge text-bg-secondary">2015</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Jamaica -->
+            <div class="project-card mb-4">
+              <div class="row g-4 align-items-center">
+                <div class="col-md-5">
+                  <div class="project-image-box">
+                    <img src="images/Jamaica.jpg" alt="Jamaica - Montego Bay">
+                  </div>
+                </div>
+                <div class="col-md-7">
+                  <h3 class="h4 fw-semibold mb-2">Jamaica</h3>
+                  <p class="text-muted mb-3">Montego Bay — Summer 2025. Highlights: beaches, soca music, and jerk chicken.</p>
+                  <div class="d-flex gap-2 flex-wrap">
+                    <span class="badge text-bg-secondary">Beaches</span>
+                    <span class="badge text-bg-secondary">2025</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- South Korea -->
+            <div class="project-card mb-4">
+              <div class="row g-4 align-items-center">
+                <div class="col-md-5">
+                  <div class="project-image-box">
+                    <img src="images/South_Korea.jpg" alt="South Korea - Seoul">
+                  </div>
+                </div>
+                <div class="col-md-7">
+                  <h3 class="h4 fw-semibold mb-2">South Korea</h3>
+                  <p class="text-muted mb-3">Seoul — Spring 2025. Highlights: street food, palaces, and vibrant neighborhoods.</p>
+                  <div class="d-flex gap-2 flex-wrap">
+                    <span class="badge text-bg-secondary">Seoul</span>
+                    <span class="badge text-bg-secondary">2025</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Mexico -->
+            <div class="project-card mb-4">
+              <div class="row g-4 align-items-center">
+                <div class="col-md-5">
+                  <div class="project-image-box">
+                    <img src="images/Mexico.jpg" alt="Mexico - Mexico City">
+                  </div>
+                </div>
+                <div class="col-md-7">
+                  <h3 class="h4 fw-semibold mb-2">Mexico</h3>
+                  <p class="text-muted mb-3">Holbox - Fall 2024. Highlights: Dia de los muertos, cenotes, tacos, and a crocodile tour!</p>
+                  <div class="d-flex gap-2 flex-wrap">
+                    <span class="badge text-bg-secondary">Holbox</span>
+                    <span class="badge text-bg-secondary">2024</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Argentina -->
+            <div class="project-card mb-4">
+              <div class="row g-4 align-items-center">
+                <div class="col-md-5">
+                  <div class="project-image-box">
+                    <img src="images/Argentina.jpg" alt="Argentina - Buenos Aires">
+                  </div>
+                </div>
+                <div class="col-md-7">
+                  <h3 class="h4 fw-semibold mb-2">Argentina</h3>
+                  <p class="text-muted mb-3">Buenos Aires — Spring 2015. Highlights: tango, steak, colourful neighborhoods and seeing family</p>
+                  <div class="d-flex gap-2 flex-wrap">
+                    <span class="badge text-bg-secondary">Buenos Aires</span>
+                    <span class="badge text-bg-secondary">2015</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Ireland -->
+            <div class="project-card mb-4">
+              <div class="row g-4 align-items-center">
+                <div class="col-md-5">
+                  <div class="project-image-box">
+                    <img src="images/Ireland.jpg" alt="Ireland - Dublin">
+                  </div>
+                </div>
+                <div class="col-md-7">
+                  <h3 class="h4 fw-semibold mb-2">Ireland</h3>
+                  <p class="text-muted mb-3">Dublin — Fall 2016. Highlights: pubs, literature, and green landscapes. Bonus to trace back the family tree!</p>
+                  <div class="d-flex gap-2 flex-wrap">
+                    <span class="badge text-bg-secondary">Dublin</span>
+                    <span class="badge text-bg-secondary">2016</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- map is initialized from map.js (DOMContentLoaded) to avoid duplicate maps -->
+
+      </div>
+    </main>
+
+<script>
+  (function () {
+    const overlay = document.getElementById('mapOverlay');
+    const titleEl = document.getElementById('overlayTitle');
+    const bodyEl = document.getElementById('overlayBody');
+    const closeBtn = document.getElementById('overlayClose');
+    const svgMap = document.getElementById('svgMap');
+
+    function showOverlay(info) {
+      if (!overlay) return;
+      titleEl.textContent = info?.title || info?.country || '';
+      bodyEl.innerHTML = info?.html || `<p>${(info && info.description) || 'No details available.'}</p>`;
+      overlay.style.display = 'flex';
+      // prevent clicks from falling through
+      overlay.addEventListener('click', onDocClick);
+      document.addEventListener('keydown', onKey);
+    }
+
+    function hideOverlay() {
+      if (!overlay) return;
+      overlay.style.display = 'none';
+      overlay.removeEventListener('click', onDocClick);
+      document.removeEventListener('keydown', onKey);
+    }
+
+    function onDocClick(e) {
+      const panel = overlay.querySelector('.map-overlay__panel');
+      if (!panel.contains(e.target)) hideOverlay();
+    }
+
+    function onKey(e) { if (e.key === 'Escape') hideOverlay(); }
+
+    closeBtn?.addEventListener('click', hideOverlay);
+
+    // Listen for map.js custom event when a country is clicked
+    svgMap?.addEventListener('countryclicked', function (e) {
+      const code = e?.detail?.country;
+      const info = e?.detail?.info || { title: code, description: '' };
+      if (!code) return;
+      // Show overlay
+      showOverlay(info);
+    });
+  })();
+</script>
+
+<!-- Removed drawer and backdrop to keep page focused on the SVG map -->
+
+</body>
+
+    <footer class="bg-dark py-4 mt-0">
+        <div class="container text-white text-center">
+            <p class="mb-0">
+            When I am not exploring I like to make projects and share them here :)
+            I hope you enjoyed and please reach out if you would like to collaborate!
+            </p>
+        </div>
+    </footer>
+</html>
+

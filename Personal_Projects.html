@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Projects</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Nav -->
+    <header class="topnav">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+        <a class="navbar-brand fw-semibold" href="index.html">Austin Gilbride</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+            <li class="nav-item"><a class="nav-link px-lg-3" href="About.html">About</a></li>
+            <li class="nav-item"><a class="nav-link px-lg-3" href="Contact.html">Contact</a></li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+    </header>
+
+
+  <!----------------------------------------- Main Section --------------------------------------------------------->
+    <section class="projects-page py-5 pb-0">
+    <div class="container">
+
+        <div class="text-center mb-5">
+        <h1 class="fw-bold">Personal Projects</h1>
+        <p class="text-muted mb-0">A few things I’m building and experimenting with click on them to go to their github pages!</p>
+        </div>
+
+        <!-- Project 1 -->
+        <a href="project1.html" class="project-link">
+            <a class="project-link" href="https://github.com/agilbride25/lichess-analysis" target=""_blank" rel="noopener noreferrer" aria-label="Open GitHub repo for Lichess Win Analysis">
+            <div class="project-card">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-5">
+                <div class="project-image-box">
+                <!-- Replace src with your image -->
+                    <img src="images/Screenshot 2026-02-19 at 1.21.18 PM.png" alt="Project 1 preview">
+                </div>
+                </div>
+                <div class="col-md-7">
+                <h2 class="h4 fw-semibold mb-2">Lichess Win Analysis</h2>
+                <p class="text-muted mb-3">
+                    This project analyzes my chess games from Lichess, providing insights into my playing style and areas for improvement.
+                    This one was cool to learn Jupyter Notebook and some Python libraries.
+                </p>
+                <div class="d-flex gap-2 flex-wrap">
+                    <span class="badge text-bg-secondary">Python</span>
+                    <span class="badge text-bg-secondary">Chess</span>
+                    <span class="badge text-bg-secondary">Machine Learning</span>
+                </div>
+                </div>
+            </div>
+            </div>
+        </a>
+
+        <!-- Project 2 -->
+        <a href="project2.html" class="project-link"> 
+            <a href="https://github.com/agilbride25/RolyPolyTumble" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="Open GitHub repo for RolyPoly Tumble">
+            <div class="project-card">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-5">
+                <div class="project-image-box">
+                    <img src="images/RPT_V1_sc.png" alt="Project 2 preview">
+                </div>
+                </div>
+                <div class="col-md-7">
+                <h2 class="h4 fw-semibold mb-2">RolyPoly Tumble!</h2>
+                <p class="text-muted mb-3">
+                    RolyPoly Tumble was inspired by the games I would play in class in high school. Having more experience now with webhooks and APIs, I wanted to create a game that could be played in the browser and would be fun to share with friends.
+                    I hope you enjoy this fun and engaging game built with Node.js and Express. Players control a rolling character, navigating through obstacles and collecting items.
+                    Coming to a server near you soon!
+                </p>
+                <div class="d-flex gap-2 flex-wrap">
+                    <span class="badge text-bg-secondary">Node</span>
+                    <span class="badge text-bg-secondary">API</span>
+                    <span class="badge text-bg-secondary">Frontend</span>
+                </div>
+                </div>
+            </div>
+            </div>
+        </a>
+
+        <!-- Project 3 -->
+        <a href="project3.html" class="project-link">
+            <a href="https://github.com/agilbride25/Maghoun_Timer" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="Open GitHub repo for MBTA Train Timer">
+            <div class="project-card">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-5">
+                <div class="project-image-box">
+                    <img src="images/2025-08-25-subway-map.jpg" alt="Project 3 preview">
+                </div>
+                </div>
+                <div class="col-md-7">
+                <h2 class="h4 fw-semibold mb-2">MBTA Train Timer</h2>
+                <p class="text-muted mb-3">
+                This project was inspired by two things. 
+                #1 - My childhood love for Trains. 
+                #2 - The frozen hellscape that is the MBTA in Boston.
+                I wanted to create a simple web app that would allow me to quickly check the arrival times of the trains so that I didn't 
+                have to wait outside in the cold for 20 minutes wondering if the train was actually coming or if it was just late. 
+                This project uses the MBTA API to get real-time data on train arrivals and departures, and is built with Python and Flask.
+                </p>
+                <div class="d-flex gap-2 flex-wrap">
+                    <span class="badge text-bg-secondary">APIs</span>
+                    <span class="badge text-bg-secondary">AI</span>
+                    <span class="badge text-bg-secondary">Python</span>
+                </div>
+                </div>
+            </div>
+            </div>
+        </a>
+
+    </div>
+    </section>
+
+
+  <!-- ------------------------------------Footer ------------------------------------------------------------->
+    <footer class="bg-dark py-4 mt-0">
+        <div class="container text-white text-center">
+            <p class="mb-0">
+            When I am not exploring I like to make projects and share them here :)
+            I hope you enjoyed and please reach out if you would like to collaborate!
+            </p>
+        </div>
+    </footer>
+
+  <script>
+    // Use the DOM (HTML object) method to add vertical spacing between project cards
+    (function () {
+      function applyProjectSpacing() {
+        const cards = document.querySelectorAll('.project-card');
+        if (!cards) return;
+        const isMobile = window.matchMedia('(max-width: 768px)').matches;
+        const gap = isMobile ? '1.5rem' : '3rem';
+        cards.forEach(card => {
+          card.style.marginBottom = gap;
+        });
+      }
+
+      document.addEventListener('DOMContentLoaded', applyProjectSpacing);
+      // also update spacing when the viewport changes
+      window.addEventListener('resize', applyProjectSpacing);
+    })();
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

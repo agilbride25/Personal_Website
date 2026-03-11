@@ -1,0 +1,513 @@
+/* Banner container ----------------------- */
+.topnav {
+  position: relative;
+  background-image: url("images/coolbackgrounds-fractalize-cool_backgrounds.png");
+  background-size: cover;
+  background-position: center 70%;
+  background-repeat: no-repeat;
+  height: 80px;
+}
+
+/* Dark overlay ON the header background */
+.topnav::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+/* Keep navbar above overlay */
+.topnav .navbar {
+  position: relative;
+  z-index: 2;
+  height: 80px;
+}
+
+/* Nicer link styling */
+.topnav .navbar-brand {
+  letter-spacing: 0.2px;
+}
+
+.topnav .nav-link {
+  color: rgba(255, 255, 255, 0.9);
+  border-radius: 999px;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.topnav .nav-link:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+
+/* Mobile header height */
+@media (max-width: 768px) {
+  .topnav {
+    height: 64px;
+    background-position: center 60%;
+  }
+
+  .topnav .navbar {
+    height: 64px;
+  }
+}
+
+/* Adventures page specific styles */
+.topnav--overlay {
+  /* make header overlay only when this modifier class is used */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  /* keep a subtle translucent background so links remain readable */
+  background: linear-gradient(to bottom, rgba(0,0,0,0.45), rgba(0,0,0,0.15));
+}
+
+/* ensure page content doesn't sit underneath the fixed header */
+.adventures-page {
+  padding-top: 100px; /* adjust to match your header height (80px by default) */
+}
+
+/* Map wrapper constrains the SVG map to a reasonable size */
+.svg-map-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  height: 520px;
+  overflow: visible;
+  position: relative; /* allow absolutely-positioned popups inside */
+}
+
+#svgMap {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+}
+
+/* ensure any inline SVG produced by svgMap fills its container */
+.svg-map-wrapper svg {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+  transform-origin: top center;
+  transform: translateY(-8%);
+}
+
+
+/* small-screen tweak */
+@media (max-width: 768px) {
+  .adventures-page { padding-top: 80px; }
+  .svg-map-wrapper { height: 360px; }
+}
+
+/* Country popup styles */
+.country-popup {
+  position: absolute;
+  z-index: 2000;
+  background: #fff;
+  color: #111;
+  border-radius: 8px;
+  padding: 12px 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  max-width: 320px;
+  transform: translate(-50%, -100%);
+  pointer-events: auto;
+}
+
+.country-popup h4 {
+  margin: 0 0 6px 0;
+  font-size: 1rem;
+}
+
+.country-popup p { margin: 0; font-size: 0.9rem; color: #444; }
+
+.country-popup .close-btn {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  background: transparent;
+  border: none;
+  font-size: 1.05rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+/* Map overlay centered panel */
+.map-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  pointer-events: auto;
+}
+
+.map-overlay__panel {
+  background: rgba(255,255,255,0.96);
+  color: #111;
+  border-radius: 12px;
+  width: min(760px, 92%);
+  max-height: 80vh;
+  overflow: auto;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.25);
+  padding: 18px 20px;
+  position: relative;
+}
+
+.map-overlay__close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.map-overlay__panel h3 { margin-top: 0; }
+
+@media (max-width: 576px) {
+  .map-overlay__panel { width: 96%; padding: 14px; }
+}
+
+/* ---------------------------------Main Section CSS------------------ */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.image-section {
+  position: relative;
+  background-image: url("images/IMG_3455\ 2.jpeg");
+  background-size: cover;
+  background-position: center 70%;
+  background-repeat: no-repeat;
+  /* fill viewport but subtract desktop header height (80px) so footer sits directly below */
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+}
+
+/* Dark overlay for readability */
+.image-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Make content sit above overlay */
+.image-section .container {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 0; /* remove extra spacing */
+  padding-bottom: 0;
+}
+
+/* Remove default heading margin that can create gaps */
+.image-section h1 { margin: 0 0 0.5rem 0; }
+
+/* Optional content blocks */
+.content-box {
+  background: rgba(255, 255, 255, 0.85);
+  color: black;
+  border-radius: 8px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.content-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Mobile shrink */
+@media (max-width: 768px) {
+  .image-section {
+    /* subtract mobile header height (180px) */
+    min-height:calc(100vh - 64px);
+  }
+}
+
+.content-link {
+  text-decoration: none;
+  display: block;
+  color: inherit;
+}
+
+/* ---------------- HERO BUTTONS (UPDATED) ---------------- */
+
+/* Row: evenly spaced with side padding so they don't touch edges */
+.hero-buttons {
+  display: flex;
+  justify-content: space-between;   /* even distribution across the row */
+  align-items: center;
+  width: 100%;
+  max-width: 1100px;               /* keeps spacing looking intentional on wide screens */
+  margin: 0 auto;
+  padding: 0 2rem;                 /* side padding so buttons don't hit edges */
+  gap: 1.5rem;                     /* keeps a minimum gap if screen gets tighter */
+  z-index: 2;
+}
+
+/* Equal-width buttons + "float" hover */
+.hero-btn {
+  width: 240px;                    /* identical width regardless of text length */
+  height: 64px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 1rem;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 1.05rem;
+  white-space: nowrap;
+  border-radius: .5rem;
+
+  transition: transform 180ms cubic-bezier(.2,.8,.2,1), box-shadow 180ms ease;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.hero-btn:hover,
+.hero-btn:focus {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.22);
+}
+
+.hero-btn:active {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.14);
+}
+
+/* Small screens: stack and fill width with padding */
+@media (max-width: 575.98px) {
+  .hero-buttons {
+    flex-direction: column;
+    padding: 0 1rem;
+    gap: .75rem;
+    max-width: 420px;
+  }
+  .hero-btn {
+    width: 100%;
+    height: 56px;
+  }
+}
+
+/* Buttons grid under hero (even spacing, fixed size, white text) */
+.buttons-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 920px;
+  margin: 0 auto;
+  z-index: 2;
+  align-items: center;
+  justify-items: center;
+}
+
+.buttons-grid .btn {
+  width: 240px;
+  height: 64px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  /* text and weight */
+  font-weight: 700;                 /* bold */
+  color: #6c757d !important;        /* grey text */
+
+  /* background / border / shape */
+  background-color: #ffffff !important;    /* white background */
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 12px;                      /* rounded edges */
+
+  /* visual polish */
+  box-shadow: 0 6px 14px rgba(0,0,0,0.06);
+  transition: transform .18s ease, box-shadow .18s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* hover/focus "pop" effect */
+.buttons-grid .btn:hover,
+.buttons-grid .btn:focus {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.18);
+  z-index: 3;
+}
+
+/* responsive: stack on small screens */
+@media (max-width: 575.98px) {
+  .buttons-grid {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+  }
+  .buttons-grid .btn {
+    width: 100%;
+    height: 56px;
+  }
+}
+
+/* ------------------------------ Footer Stuff-------------------------------- */
+
+/*-------------------------- Personal Projects CSS ------------------------------*/
+
+.projects-header {
+  background-image: url("images/projects_header.jpg");
+}
+
+.projects-section {
+  background-image: url("images/projects_background.jpg");
+}
+
+/* Grey page background */
+.projects-page {
+  background: #e9ecef; /* bootstrap-ish light grey */
+}
+
+/* Big white boxes (each project section) */
+.project-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 3rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* Image container */
+.project-image-box {
+  width: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #f1f3f5;
+  aspect-ratio: 16 / 10; /* keeps boxes uniform */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Image fills container nicely */
+.project-image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.projects-page {
+  background: #e9ecef;
+}
+
+.projects-page .project-card:last-child {
+  margin-bottom: 10px;
+}
+
+.project-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.project-link:hover .project-card {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.project-card {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.fixed-bg {
+  background-image: url("images/");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
+
+
+/*-------------------------- Drawer Styles ------------------------------*/
+/* Drawer shell */
+.drawer{
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: min(420px, 92vw);
+  background: rgba(18, 25, 35, 0.98); /* dark panel */
+  border-left: 1px solid rgba(255,255,255,0.12);
+  transform: translateX(100%);
+  transition: transform 200ms ease;
+  z-index: 1000;
+  padding: 16px;
+}
+
+.drawer.open{
+  transform: translateX(0);
+}
+
+.drawer__close{
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 10px;
+  padding: 8px 10px;
+  cursor: pointer;
+}
+
+/* Card */
+.drawer__card{
+  margin-top: 14px;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.04);
+}
+
+.drawer__img{
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: none; /* shown when we have an image */
+}
+
+.drawer__meta{
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.10);
+}
+
+.drawer__row{
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 6px 0;
+}
+
+.drawer__label{
+  color: rgba(255,255,255,0.65);
+  font-size: 0.9rem;
+}
+
+.drawer__value{
+  color: #fff;
+  font-weight: 600;
+  text-align: right;
+}
+
+.drawer__desc{
+  padding: 14px;
+  color: rgba(255,255,255,0.9);
+  line-height: 1.55;
+}
+
+/* Backdrop */
+.drawer-backdrop{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 900;
+}
