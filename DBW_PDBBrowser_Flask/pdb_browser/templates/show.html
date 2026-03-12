@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<table class="table">
+    <tbody>
+        <tr>
+            <td>PDB reference</td>
+            <td>{{data['idCode']}}</td>
+            <td rowspan="5">
+                <a href="{{config['PDB_PREFIX']}}{{data['idCode']}}" target="_blank">
+                <img src="https://cdn.rcsb.org/images/structures/{{data['idCode'].lower()}}_assembly-1.jpeg" border="0" width="250" ><br>
+                    Link to Protein Data Bank</a>
+            </td>
+            </tr>
+            <tr>
+                <td>Header</td>
+                <td>{{data['header']}}</td>
+            </tr>
+            <tr>
+                <td>Title</td>
+                <td>{{ data['compound']}}</td>
+            </tr>
+            <tr>
+                <td>Resolution</td>
+                <td>
+                    {% if data['resolution'] %}
+                        {{ data['resolution'] }}
+                    {% else %}
+                        N.D
+                    {% endif %}
+                </td>
+            </tr>
+            <tr>
+                <td>Accession Date</td>
+                <td>{{ data['accessionDate'] }}</td>
+            </tr>
+            <tr>
+                <td>Experiment type</td>
+                <td colspan="2">{{ globals['expTypesArray'][data['idExpType']] }}</td>
+            </tr>
+            <tr>
+                <td>Authors</td>
+                <td colspan="2">
+                    {{ data['author_list'] }}
+                </td>
+            </tr>
+            <tr>
+                <td>Source</td>
+                <td colspan="2">
+                    {{ data['source_list'] }}
+                </td>
+            </tr>
+            <tr>
+                <td>Sequence(s)</td>
+                <td colspan="2">
+                    {% for sq in data['sequences'] %}
+                    <p><pre>{{ sq }}</pre></p>
+                    {% endfor %}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}
