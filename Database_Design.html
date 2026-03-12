@@ -36,7 +36,7 @@
   <section class="image-section d-flex align-items-center">
     <div class="container text-center">
       <h1 class="fw-bold text-white mb-4">Database Model for Clinical Trials</h1>
-      <p class="text-white-50 mb-4">Overview and example ERD for a hypothetical clinical trial database. Replace this content with diagrams and details.</p>
+      <p class="text-white-50 mb-4">Overview and example ERD for a hypothetical clinical trial database</p>
     </div>
   </section>
 
@@ -44,7 +44,9 @@
     <div class="container">
 
       <h2 class="mb-3 text-center">Summary</h2>
-      <p class="text-muted text-center">This page is a placeholder for the database design. Add schema diagrams, table definitions, and example SQL here.</p>
+      <p class="text-muted text-center">The primary keys are the unique identifiers for each table. They make sure each record can be distinguished from every other record. For example, laboratory_id uniquely identifies each laboratory, contact_id each study contact, study_id each clinical study, user_id each application user, role_id each role, participant_id each study participant, visit_id each study visit, and file_id each clinical file. In the app_user_role table, the primary key is a composite key made from (user_id, role_id), which means the same user-role combination cannot be entered twice.
+
+The tables are linked through foreign key relationships. A clinical_study belongs to one laboratory through laboratory_id, and it can also point to one main study_contact through primary_contact_id. Users and roles are connected through the app_user_role bridge table, which allows one user to have multiple roles and one role to belong to multiple users. The study_participant table connects participants to a study, and its participant_id is also linked to the external participant_information table, which represents where the real identifying personal data would live. Then study_visit links to study_participant, meaning each visit belongs to one participant in the study. Finally, clinical_file links back to the study, participant, and optionally a visit, so each stored file can be tied to the right context.</p>
 
       <!-- Centered data model image -->
       <div class="row my-4">
@@ -58,14 +60,6 @@
         <div class="col-12 col-md-8 mx-auto">
           <label for="datamodel-explain" class="form-label fw-semibold">Explanation of the table</label>
           <textarea id="datamodel-explain" class="form-control" rows="8" placeholder="Add explanation of the data model / table here..."></textarea>
-        </div>
-      </div>
-
-      <div class="card mb-4 mt-4">
-        <div class="card-body">
-          <h5 class="card-title">Example ERD</h5>
-          <p class="card-text text-muted">(Add additional ERD images or SVGs below)</p>
-          <img src="images/placeholder.png" alt="ERD placeholder" class="img-fluid rounded">
         </div>
       </div>
 
